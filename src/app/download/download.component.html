@@ -1,0 +1,65 @@
+<h1 class="text-center animate-charcter ">BOOKED DETAILS</h1>
+<section class="py-5 bg-dark">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-1 row-cols-xl-2 justify-content-center shadow ">
+            <div  class="col mb-5 " *ngFor="let i of pdata">
+                <div class="card h-100 d text-start">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Groom Name</th>
+                                <td colspan="2">{{i.gName}}</td>
+                             
+                              </tr>
+                            <tr>
+                              <th scope="row">Bride Name</th>
+                              <td>{{i.bname}}</td>
+                              
+                            </tr>
+                            <tr>
+                              <th scope="row">StartDate</th>
+                              <td colspan="2">{{i.sdate}}</td>
+                           
+                            </tr>
+                            <tr>
+                                <th scope="row">EndDate</th>
+                                <td colspan="2">{{i.edate}}</td>
+                             
+                              </tr>
+                              <tr>
+                                <th scope="row">Address</th>
+                                <td colspan="2">{{i.address}}</td>
+                             
+                              </tr>
+                              <tr>
+                                <th scope="row">Phone Number</th>
+                                <td colspan="2">{{i.mobile}}</td>
+                             
+                              </tr>
+                              <tr>
+                                <th scope="row">Advance Amount</th>
+                                <td colspan="2">{{i.advamt}}</td>
+                             
+                              </tr>
+                              <tr>
+                                <th><button class="btn btn-outline-primary" routerLink="/viewall">Back</button></th>
+                              </tr>
+                          </tbody>
+                      </table>
+                 
+                    <!-- <p class="fs-4 ms-5 mt-3">Groom Name:<strong>{{i.gName}}</strong></p>
+                    <p class="fs-4 ms-5">Bride Name:<strong>{{i.bname}}</strong></p>
+                    <p class="fs-4 ms-5">StartDate:<strong>{{i.sdate}}</strong></p>
+                    <p class="fs-4 ms-5">EndDate:<strong>{{i.edate}}</strong></p>
+                      
+                              
+                              <p class="fs-4 ms-5" >Address:<strong>{{i.address}}</strong></p>
+                            
+                            <p class="fs-4 ms-5">Phone Number:<strong>{{i.mobile}}</strong></p>
+                            <p class="fs-4 ms-5">Advance Amount:<strong>{{i.advamt}}<i class="fa-solid fa-indian-rupee-sign fa-fade"></i></strong></p> -->
+                          </div>
+                          
+                     </div>
+
+                    </div>
+                    

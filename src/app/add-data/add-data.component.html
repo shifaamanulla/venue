@@ -1,0 +1,68 @@
+
+   <body>
+       <div>
+            <div  class="row">
+               <div class="col-6">
+<img class="w-100"  src="https://i.postimg.cc/DzyHRjRT/Sandy-Ppl-16-Single-02.jpg" alt="">
+               </div> 
+
+              <div class="col-6 ">
+                    <div class="w-75 mb-5 aa"  >
+                      <h1 class="text-center text-danger mt-5 " >Add New Venu Details </h1>
+            
+                        <form [formGroup]="addDataform" action="" class="w-100 container text-center a">
+                        <input type="text" class="form-control " id="p1" placeholder="id" name="pn1" formControlName="id" >
+                        <div *ngIf="(this.addDataform.get('id')?.errors)&&(this.addDataform.get('id')?.touched)">
+                          <p class="text-danger">must contain number!</p>
+                        </div>
+
+                        <input  type="text" class="form-control mt-2" id="p2" placeholder="Name" name=" pn2"formControlName="name" >
+                        <div *ngIf="(this.addDataform.get('name')?.errors)&&(this.addDataform.get('name')?.touched)">
+                          <p class="text-danger">must contain characters!</p>
+                        </div>
+                        <input  type="text" class="form-control mt-2" id="9" placeholder="Address" name=" pn9" formControlName="address">
+                        <div *ngIf="(this.addDataform.get('address')?.errors)&&(this.addDataform.get('address')?.touched)">
+                          <p class="text-danger">must contain characters!</p>
+                        </div>
+                        <input  type="text" class="form-control mt-2" id="p8" placeholder="phone number" name="pn9" formControlName="phone">
+                        <div *ngIf="(this.addDataform.get('phone')?.errors)&&(this.addDataform.get('phone')?.touched)">
+                          <p class="text-danger">must contain number!</p>
+                        </div>
+                        <input type="text" class="form-control mt-2" id="p3" placeholder="category id" name="pn3" formControlName="catId">
+                        <div *ngIf="(this.addDataform.get('catId')?.errors)&&(this.addDataform.get('catId')?.touched)">
+                          <p class="text-danger">must contain number!</p>
+                        </div>
+                        <input type="text" class="form-control mt-2" id="p4" placeholder="Description" name="pn4" formControlName="desc">
+                        <div *ngIf="(this.addDataform.get('desc')?.errors)&&(this.addDataform.get('desc')?.touched)">
+                          <p class="text-danger">must contain number and characters!</p>
+                        </div>
+                        <input  type="text" class="form-control mt-2" id="p5" placeholder="price" name="pn5"formControlName="price" >
+                        <div *ngIf="(this.addDataform.get('price')?.errors)&&(this.addDataform.get('price')?.touched)">
+                          <p class="text-danger">must contain number!</p>
+                        </div>
+                        <input type="text" class="form-control mt-2" id="p6" placeholder="venue Image" name="pn6"formControlName="image">
+                        <div *ngIf="(this.addDataform.get('image')?.errors)&&(this.addDataform.get('image')?.touched)">
+                          <p class="text-danger">must contain number,characters & special charactres!</p>
+                        </div>
+                        <input  type="text" class="form-control mt-2" id="p7" placeholder="Rating" name="pn7" formControlName="rating">
+                        <div *ngIf="(this.addDataform.get('rating')?.errors)&&(this.addDataform.get('rating')?.touched)">
+                          <p class="text-danger">must contain characters!</p>
+                        </div>
+                        <input  type="text" class="form-control mt-2" id="p8" placeholder="place" name="pn8" formControlName="place">
+                        
+                        <div *ngIf="(this.addDataform.get('place')?.errors)&&(this.addDataform.get('place')?.touched)">
+                          <p class="text-danger">must contain characters!</p>
+                        </div>
+                        
+                        <button  class="btn btn-outline-dark mt-3 mb-4 w-25 " (click)="adddata()">Add venue</button>
+                        <button  class="btn btn-outline-dark mt-3 ms-5 mb-4 w-25 " routerLink="/adminViewAll"> View venue</button>
+
+                        </form>
+                        
+                    </div>
+              </div>
+            
+            </div>
+       </div>
+      
+   </body>

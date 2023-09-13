@@ -1,0 +1,23 @@
+input{
+    background-color: rgba(240, 255, 255, 0);
+    /* border: none; */
+    /* border-bottom: 2px solid rgb(0, 0, 0); */
+    color: rgb(5, 5, 5);
+    font-weight: 700;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.637);
+    font-size: large;
+    font-weight: 700;
+}
+.aa{
+    /* border: 1px rgb(0, 0, 0) solid; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     /* background-image: linear-gradient(rgba(68, 0, 255, 0.24), rgba(192, 73, 176, 0.274)); */
+}
+/* body{
+    /* margin: 0;
+    /* background-color: rgb(231, 231, 243); */
+    /* background-image: url('https://i.postimg.cc/0ys3XJq0/matthew-essman-j-Tnip-V64u-Lo-unsplash.jpg'); */
+    /* background-size: cover;  */
+

@@ -1,0 +1,104 @@
+<!-- <div class="container w-25 text-center mt-5 mb-5 d" style="border:1px dotted white; background-color: rgba(255, 255, 255, 0.644);">
+    <form action="" >
+        <h2 class=" mt-2">Welcome Admin </h2>
+        <input type="text" class="form-control mt-3" placeholder="UserName">
+        <input type="password" class="form-control mt-3" placeholder="password">
+        <button type="button" class="btn btn-outline-dark mt-3 mb-3">Login</button>
+    </form>
+    
+
+
+</div> -->
+
+<section class="vh-100 " style="background-image:url('https://i.postimg.cc/X7T7tRhm/wedding-venues-oklahoma-outdoor-wedding-venue-Plantation-at-coal-creek.jpg');background-size: cover;" >
+  <div class="container-fluid h-custom ">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+    
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 "style="border:2px solid rgba(255, 255, 255, 0); background-color: rgba(0, 0, 0, 0.63); margin-top:150px; margin-right:700px">
+        <form action="" [formGroup]="loginForm">
+          <!-- Email input -->
+          <div class="form-outline mb-4 mt-5">
+
+            <input type="text" class="form-control form-control-lg" placeholder="Enter a valid UserName"
+             formControlName="name" name="n1" id="namee1" />
+            <label class="form-label text-white " for="form3Example3">Username</label>
+          </div>
+          <div *ngIf="(this.loginForm.get('name')?.errors)&&(this.loginForm.get('name')?.touched)">
+            <p class="text-danger">must contain characters</p>
+          </div>
+
+          <div class="form-outline mb-3">
+            <input type="password" class="form-control form-control-lg" placeholder="Enter password" name="pass"
+              name="n2"formControlName="psw" id="pswq" />
+            <label class="form-label text-white" for="form3Example4">Password</label>
+          </div>
+          <div *ngIf="(this.loginForm.get('psw')?.errors)&&(this.loginForm.get('psw')?.touched)">
+            <p class="text-danger">must contain characters&numbers</p>
+          </div>
+
+ 
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-light btn-lg mb-3"style="padding-left: 2.5rem; padding-right: 2.5rem;"
+              (click)="login()">Login</button>
+            <button type="button" class="btn btn-light btn-lg mb-3 ms-5 me-5"style="padding-left:2.5rem; padding-right: 2.5rem;" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Register</button>
+
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content w-100">
+
+      <div class="modal-body text-center" >
+        <div class="container w-75 ">
+          <form [formGroup]="registerForm" action="" id="d">
+            <h1>Register Form</h1>
+            <div>
+              <input type="text" formControlName="id" name="id" id="i1" placeholder="enter an id" class="form-control mt-3 ">
+            </div>
+            <div *ngIf="(this.registerForm.get('id')?.errors) && (this.registerForm.get('id')?.touched)">
+              <p class="text-danger">must contain numbers only</p>
+            </div>
+
+            <div>
+              <input type="text" formControlName="name" placeholder="enter user name" class="form-control mt-3 "
+                name="uname" id="i2">
+            </div>
+
+            <div *ngIf="(this.registerForm.get('name')?.errors)&& (this.registerForm.get('name')?.touched)">
+              <p class="text-danger">must contain characters only</p>
+            </div>
+
+            <input type="text" formControlName="phone" placeholder="enter phone number" class="form-control mt-3" id="i"name="n1">
+        <div *ngIf="(this.registerForm.get('phone')?.errors)&& (this.registerForm.get('phone')?.touched)">
+              <p class="text-danger">must contain Numbers only</p>
+            </div>
+
+            <input type="text" formControlName="psw" placeholder="password" class="form-control mt-3" name="ph" id="i4">
+            <div *ngIf="(this.registerForm.get('psw')?.errors)&& (this.registerForm.get('psw')?.touched)">
+              <p class="text-danger">must contain characters&numbers only</p>
+            </div>
+            <input type="text" formControlName="cpsw" placeholder="confirm password" class="form-control mt-3"
+              name="cp" id="i5">
+            <div *ngIf="(this.registerForm.get('cpsw')?.errors)&& (this.registerForm.get('cpsw')?.touched)">
+              <p class="text-danger">must contain characters & numbers only</p>
+            </div>
+            <button type="button" class="btn btn-outline-dark mt-3" (click)="signup()">Register</button>
+
+          </form>
+
+        </div>
+        <button type="button" class="btn btn-warning w-100 mt-5" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>

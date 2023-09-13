@@ -1,0 +1,23 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-2 justify-content-center  ">
+            <div *ngFor=" let i of alldata"  class="col mb-5">
+                <div class="card h-100 d shadow" >
+                   
+                 
+                      <img class="card-img-top " style="height: 300px;" src={{i.image}} alt="..." />
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              
+                              <h4 class="fw-bolder">{{i.name}}</h4>
+                            <h5 ><i class="fa-solid fa-indian-rupee-sign fa-fade">{{i.price}}</i></h5>
+                            <h6>{{i.place}}</h6>
+                          </div>
+                         <a class="btn btn-dark w-100 text-center  mt-3" href="/adminView/{{i.id}}">View</a>
+                          
+                     </div>
+
+                    </div>
+                    
+

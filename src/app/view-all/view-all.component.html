@@ -1,0 +1,53 @@
+<header class="py-5" style="background-color: rgb(128, 15, 0);" >
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder" style="font-family: poppins;">Choose your Venue</h1>
+          <p class="lead fw-normal text-white-50 mb-0">We Are with You</p>
+      </div>
+      <div class="container d-flex w-100 mb-5 mt-5 " >
+        <div (click)="categorydata(100)" class="card a" style="width: 30rem; height: fit-content;" >
+            <!-- <img src="https://i.postimg.cc/R0cGmtR3/farmhouse-2.jpg" class="card-img-top" alt="..."  style="height: 200px;" > -->
+            <div class="card-body">
+              <p class="card-text text-center fs-5"  style="color:rgb(252, 38, 10);  font-weight:600;">OutDoor Wedding </p>
+            </div>
+          </div>
+          <div (click)="categorydata(101)" class="card ms-2 a" style="width: 30rem; height: fit-content">
+            <!-- <img src="https://i.postimg.cc/zDbmmth3/Dewan-hall.jpg" class="card-img-top" alt="..." style="height: 200px;"> -->
+            <div class="card-body" >
+              <p class="card-text text-center fs-5" style="color:rgb(252, 38, 10);  font-weight:600;" >InDoor Wedding Hall</p>
+            </div>
+          </div>
+          <div  (click)="categorydata(102)" class="card ms-2 a" style="width: 30rem; height: fit-content">
+            <!-- <img src="https://i.postimg.cc/90VyBN51/images.jpg" class="card-img-top" alt="..." style="height: 200px;"> -->
+            <div class="card-body ">
+              <p class="card-text text-center fs-5" style="color:rgb(252, 38, 10); font-weight:600;">Party Hall</p>
+            </div>
+          </div>
+          
+      </div>
+  </div>
+</header>
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-2 justify-content-center  ">
+            <div *ngFor=" let i of catData|search:searchString:'place'" class="col mb-5">
+                <div class="card h-100 d shadow" >
+                   
+                 
+                      <img class="card-img-top " style="height: 300px;" src={{i.image}} alt="..." />
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                          <div class="text-center">
+                              
+                              <h4 class="fw-bolder">{{i.name}}</h4>
+                            <h5 ><i class="fa-solid fa-indian-rupee-sign fa-fade">{{i.price}}</i></h5>
+                            <h6>{{i.place}}</h6>
+                          </div>
+                         <a class="btn btn-dark w-100 text-center  mt-3" href="/view/{{i.id}}">View</a>
+                          
+                     </div>
+
+                    </div>
+                    

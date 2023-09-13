@@ -1,0 +1,55 @@
+<div class="bg-light w-100 container-fluid text-center " >
+  <h1 class="animate-charcter ms-3 mb-3 mt-3 me-2">From the moment you see this place, you’ll know it was meant for you.</h1>
+
+</div>
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 w-100 border border-light d shadow" src={{pdata.image}} alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1 text-dark"><i class="fa-solid fa-location-dot fa-flip" style="color: #000000;"></i>{{pdata.place}}</div>
+                <h2 class="display-5 fw-bolder ">{{pdata.name}}</h2>
+                <div class="fs-5 mb-5">
+                    <span class=" text-danger"><i class="fa-solid fa-indian-rupee-sign fa-fade"></i>{{pdata.price}}</span>
+                    
+ 
+                </div>
+                <p class="lead text-dark">{{pdata.desc}}</p>
+                <h5 class="text-dark">{{pdata.rating}}  <i class="fa-solid fa-star-half-stroke text-warning"></i><i class="fa-solid fa-star-half-stroke text-warning"></i><i class="fa-solid fa-star-half-stroke text-warning"></i>
+                </h5><br>
+                <h5 class="text-dark"><i class="fa-solid fa-phone fa-shake" style="color: #1f29b6;"></i>{{pdata.phone}}</h5>
+                <br>
+                <div class="d-flex">
+                    <a  class="btn btn-outline-dark flex-shrink-0" type="button" href="book">
+                        <i class="bi-cart-fill me-1 text-dark"></i>
+                        Book Now
+                       
+                    </a>
+                     
+                </div>
+              
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>

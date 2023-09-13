@@ -1,0 +1,8 @@
+input{
+    background-color: rgba(0, 0, 0, 0.685);
+    color: white;
+}
+::placeholder{
+    color: rgb(240, 232, 232);
+    font-weight: 600;
+}
